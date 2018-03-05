@@ -22,7 +22,7 @@ if (triangleBase != null) {
 			var h = Number(triangleHeight); 	
 			if ((! isNaN(h)) && (h >= 0)) {
 				var triangleArea = calcTriangleArea(a, h);
-				console.log("Triangle area is: " + triangleArea);
+				console.log('Triangle area for base a: ' + a + ' and height h: ' + h + ' is: ' + triangleArea);
 				alert("Triangle area is: " + triangleArea);
 			}
 			else {
