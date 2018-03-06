@@ -13,32 +13,26 @@ function calcTriangleArea (a, h) {
 }
 
 var triangleBase = prompt("Please enter triangle base");
-if (triangleBase != null) {
-	console.log("triangleBase: " + triangleBase);
+if (triangleBase !== null) {
+	console.log('triangleBase: ' + triangleBase);
 	var a = Number(triangleBase); 	
-	if ((! isNaN(a)) && (a >= 0)) {
-		var triangleHeight = prompt("Please enter triangle height");
-		if (triangleHeight != null) {
+	if (!isNaN(a) && a >= 0) {
+		var triangleHeight = prompt('Please enter triangle height');
+		if (triangleHeight !== null) {
 			var h = Number(triangleHeight); 	
-			if ((! isNaN(h)) && (h >= 0)) {
+			if (!isNaN(h) && h >= 0) {
 				var triangleArea = calcTriangleArea(a, h);
 				console.log('Triangle area for base a: ' + a + ' and height h: ' + h + ' is: ' + triangleArea);
-				alert("Triangle area is: " + triangleArea);
+				alert('Triangle area is: ' + triangleArea);
+			} else {
+				alert('Invalid format of triangle height. Height must be a number and > 0.');
 			}
-			else {
-				alert("Invalid format of triangle height. Height must be a number and > 0.");
-			}
-
+		} else {
+			alert('Invalid format of triangle height. Height must be a number.');
 		}
-		else {
-			alert("Invalid format of triangle height. Height must be a number.");
-		}
+	} else {
+		alert('Invalid format of triangle base. Base must be a number and > 0.');
 	}
-	else {
-		alert("Invalid format of triangle base. Base must be a number and > 0.");
-	}
-
-} 
-else {
-	alert("Invalid format of triangle base. Base must be a number.");
+} else {
+	alert('Invalid format of triangle base. Base must be a number.');
 }
